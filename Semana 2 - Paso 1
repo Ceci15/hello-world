@@ -1,0 +1,24 @@
+PROBLEMA #0. Empieza un nuevo script.
+
+sca;
+close all;
+clearvars;
+
+PsychDefaultSetup(2);
+
+screens = Screen('Screens');
+
+screenNumber = max(screens);
+
+white = WhiteIndex(screenNumber);
+black = BlackIndex(screenNumber);
+
+grey = white / 2;
+
+[window, windowRect] = PsychImaging('OpenWindow', screenNumber, grey);
+
+Screen('Flip', window);
+
+WaitSecs(5)
+
+sca;
